@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Parisienne&display=swap');
+
+/* Paleta de colores */
+
+:root {
+    --primary-color: #9D174D;
+    --text-color: #8C4966;
+    --background-color: #FADADD;
+    --secondary-color: #A83265;
+}
+
+/* Estilos generales */
+
+.page {
+    background-color: var(--background-color);
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--text-color);
+}
+
+/* Títulos */
+
+.title {
+    font-family: 'Parisienne', sans-serif;
+    font-size: 38px;
+    font-weight: 400;
+    color: var(--primary-color);
+}
+
+.subtitle {
+    font-family: 'Parisienne', sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    color: var(--primary-color);
+}
+
+/* Links */
+.link {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+/* Listas */
+
+.list {
+    list-style: none;
+}
+
+/* Imagenes */
+
+.logo {
+    height: 10vh;
+    width: auto;
+}
+
+.rrss {
+    height: 5vh;
+    width: auto;
+}
+
+.imagen {
+    height: 50vh;
+    width: auto;
+}

@@ -1,50 +1,55 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LA PRIMERA PAGINA WEB DE ABI!</title>
+    <link rel="stylesheet" href="style/style.css">
 </head>
-<body>
+
+<body class="page">
     <header>
-        <p>MI PRIMERA PÁGINA WEB</p>
+        <a href="#">
+            <img src="assets/Mi 1ra pagina/logo.png" alt="logo pagina" class="logo">
+        </a>
         <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="pages/sobre-mi.html">Sobre Mi</a></li>
-                <li><a href="pages/proyectos.html">Proyectos</a></li>
-                <li><a href="pages/servicios.html">Servicios</a></li>
-                <li><a href="pages/contacto.html">Contacto</a></li>
+            <ul class="list">
+                <li><a href="index.html" class="link">Inicio</a></li>
+                <li><a href="pages/sobre-mi.html" class="link">Sobre Mi</a></li>
+                <li><a href="pages/servicios.html" class="link">Servicios</a></li>
+                <li><a href="pages/proyectos.html" class="link">Proyectos</a></li>
+                <li><a href="pages/contacto.html" class="link">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section>
-            <h1>Soy aspirante a desarrolladora web</h1>
+            <h1 class="title">Soy aspirante a desarrolladora web </h1>
             <p>¡Bienvenidos!</p>
         </section>
         <section>
-            <h2>Sobre esta página</h2>
+            <h2 class="subtitle">Sobre esta página</h2>
             <p>Este es mi primer trabajo del curso de Desarrollo Web de Coder</p>
         </section>
         <section>
-            <h2>Las cosas que estoy aprendiendo</h2>
-            <ul>
+            <h2 class="subtitle">Las cosas que estoy aprendiendo</h2>
+            <ul class="list">
                 <li>Crear páginas web con HTML</li>
                 <li>Organizar el contenido en un sitio web</li>
                 <li>Utilizar Visual Studio Code</li>
             </ul>
         </section>
         <section>
-            <h2>Mis compañeros de estudio</h2>
+            <h2 class="subtitle">Mis compañeros de estudio</h2>
             <figure>
-                <img src="mis-gatitos.png.png" alt="Mis Gatitos">
+                <img src="assets/Mi 1ra pagina/mis-gatitos.png" alt="Mis Gatitos" class="imagen">
                 <figcaption>Mis compañeros durante esta aventura de aprender Desarrollo Web</figcaption>
             </figure>
         </section>
         <article>
-            <h2>Mi primera experiencia con HTML</h2>
+            <h2 class="subtitle">Mi primera experiencia con HTML</h2>
             <p>Hoy cree mi primera página web, usando HTML como parte del entregable de Coder</p>
             <p>Estoy aprendiendo a usar etiquétas semánticas y a como organizar el contenido de una página con ellas</p>
         </article>
@@ -52,11 +57,16 @@
     <footer>
         <p>© 2026 Abi. Todos los derechos reservados.</p>
         <p>Mis redes sociales</p>
-        <ul>
-            <li><a href="https://www.instagram.com/">Instagram</a></li>
-            <li><a href="https://www.tiktok.com">Tik Tok</a></li>
+        <ul class="list">
+            <li><a href="https://www.instagram.com/" target="_blank" class="link">
+                    <img src="assets/logos-rrss/instagram.png" alt="logo instagram" class="rrss">
+                </a></li>
+            <li><a href="https://www.tiktok.com" target="_blank" class="link">
+                    <img src="assets/logos-rrss/tiktok.png" alt="logo tiktok" class="rrss">
+                </a></li>
         </ul>
     </footer>
-    
+
 </body>
+
 </html>

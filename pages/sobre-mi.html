@@ -1,37 +1,45 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre Mi - Mi primera página web</title>
+    <link rel="stylesheet" href="../style/style.css">
 </head>
-<body>
+
+<body class="page">
     <header>
-        <p>Mi primera página</p>
+        <a href="#">
+            <img src="../assets/Mi 1ra pagina/logo.png" alt="logo pagina" class="logo">
+        </a>
         <nav>
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="sobre-mi.html"></a>Sobre Mí</li>
-                <li><a href="proyectos.html">Proyectos</a></li>
-                <li><a href="servicios.html">Servicios</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
+            <ul class="list">
+                <li><a href="../index.html" class="link">Inicio</a></li>
+                <li>Sobre Mí</li>
+                <li><a href="servicios.html" class="link">Servicios</a></li>
+                <li><a href="proyectos.html" class="link">Proyectos</a></li>
+                <li><a href="contacto.html" class="link">Contacto</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <section>
-            <h1>Sobre Mí</h1>
-            <p>Soy Abi, trabajo cómo Community Manager y empecé el curso de desarrollo web para ampliar mis conocimientos.</p>
-            <p>Nunca había pensado en esto como una posibilidad, pero es mucho más interesante y entretenido de lo que pensaba.</p>
+            <h1 class="title">Sobre Mí</h1>
+            <p>Soy Abi, trabajo cómo Community Manager y empecé el curso de desarrollo web para ampliar mis
+                conocimientos.</p>
+            <p>Nunca había pensado en esto como una posibilidad, pero es mucho más interesante y entretenido de lo que
+                pensaba.</p>
         </section>
-        <section>
-            <h2>Un poco más sobre mí</h2>
+        <article>
+            <h2 class="subtitle">Un poco más sobre mí</h2>
             <p>Tengo tres gatitos, Milo, Ares y Lana, son mis compañeros y ayudantes</p>
-            <p>Trabajo desde casa, así que paso mucho tiempo con ellos, me ayudan a distraerme cuando paso demasiado tiempo en la computadora.</p>
-        </section>
+            <p>Trabajo desde casa, así que paso mucho tiempo con ellos, me ayudan a distraerme cuando paso demasiado
+                tiempo en la computadora.</p>
+        </article>
         <section>
-            <h2>Mis Intereses</h2>
-            <ul>
+            <h2 class="subtitle">Mis Intereses</h2>
+            <ul class="list">
                 <li>Redes Sociales</li>
                 <li>Gatitos</li>
                 <li>Creación de contenido</li>
@@ -39,9 +47,9 @@
             </ul>
         </section>
         <section>
-            <h2>Mis supervisores de estudio</h2>
+            <h2 class="subtitle">Mis supervisores de estudio</h2>
             <figure>
-                <img src="../pages/mis-gatitos.png.png" alt="Mis Bebés">
+                <img src="../assets/Mi 1ra pagina/mis-gatitos.png" alt="Mis Bebés" class="imagen">
                 <figcaption>Ellos supervisan mis trabajo y mi estudio</figcaption>
             </figure>
         </section>
@@ -49,10 +57,15 @@
     <footer>
         <p>© 2026 Abi. Todos los derechos reservados.</p>
         <p>Mis Redes</p>
-        <ul>
-            <li><a href="https://instagram.com/">Instagram</a></li>
-            <li><a href="https://Tiktok.com/">TikTok</a></li>
+        <ul class="list">
+            <li><a href="https://instagram.com/" target="_blank" class="link">
+                    <img src="../assets/logos-rrss/instagram.png" alt="logo instagram" class="rrss">
+                </a></li>
+            <li><a href="https://Tiktok.com/" target="_blank" class="link">
+                    <img src="../assets/logos-rrss/tiktok.png" alt="logo tiktok" class="rrss">
+                </a></li>
         </ul>
     </footer>
 </body>
+
 </html>
