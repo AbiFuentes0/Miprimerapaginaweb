@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Parisienne&display=swap');
 
+/* Reset global */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* Paleta de colores */
 
 :root {
@@ -8,13 +16,6 @@
     --background-color: #FADADD;
     --secondary-color: #A83265;
 }
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 
 /* Estilos generales */
 
@@ -68,19 +69,21 @@
 }
 
 .imagen {
-    height: 50vh;
-    width: auto;
+    width: 100%;
+    max-width: 580px;
+    height: auto;
 }
 
 /* Navbar */
 
 header {
     background-color: #C9859D;
-    padding: 10px 50px;
+    padding: 20px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
 }
 
 .navbar {
@@ -92,7 +95,9 @@ header {
     color: var(--background-color);
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
 }
 
 /* Contenedor principal */
@@ -101,7 +106,69 @@ main {
     display: flex;
     flex-direction: column;
     gap: 30px;
-    padding: 30px;
+    padding: 20px;
+}
+
+/* CSS Grid - Página de inicio */
+
+.main-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "presentacion"
+        "sobre-pagina"
+        "aprendizaje"
+        "gatitos"
+        "experiencia";
+    gap: 30px;
+}
+
+.presentacion {
+    grid-area: presentacion;
+}
+
+.sobre-pagina {
+    grid-area: sobre-pagina;
+}
+
+.aprendizaje {
+    grid-area: aprendizaje;
+}
+
+.gatitos {
+    grid-area: gatitos;
+}
+
+.experiencia {
+    grid-area: experiencia;
+}
+
+/* CSS Grid - Sobre Mí */
+
+.sobre-mi-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "biografia"
+        "sobre-mi"
+        "intereses"
+        "supervisores";
+    gap: 30px;
+}
+
+.biografia {
+    grid-area: biografia;
+}
+
+.sobre-mi {
+    grid-area: sobre-mi;
+}
+
+.intereses {
+    grid-area: intereses;
+}
+
+.supervisores {
+    grid-area: supervisores;
 }
 
 /* Secciones de contenido */
@@ -112,13 +179,6 @@ main > article {
     flex-direction: column;
     gap: 15px;
     padding: 20px;
-}
-
-.imagen {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    border-radius: 12px;
 }
 
 /* Imágenes y descripción */
@@ -134,15 +194,23 @@ figcaption {
     text-align: center;
 }
 
+/* Redes de contacto */
+
+.redes-contacto {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
 /* Footer */
 
 footer {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     gap: 20px;
-    padding: 20px 50px;
+    padding: 20px;
     background-color: #fff5f6;
 }
 
@@ -153,73 +221,45 @@ footer ul {
     gap: 20px;
 }
 
-/* Pantallas pequeñas */
+/* Media Query - Celulares */
 
 @media (max-width: 600px) {
     header {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    nav .list {
         flex-wrap: wrap;
         justify-content: center;
-        gap: 12px;
     }
 
-    main > section,
-    main > article {
-        min-width: 0;
-        padding: 20px;
+    .navbar ul {
+        gap: 10px;
     }
 
-    footer {
-        flex-direction: column;
-        text-align: center;
+    .logo {
+        height: 100px;
     }
 }
 
-/* Ajuste Contacto */
+/* Media Query - Computadoras */
 
-.contacto main {
-    align-items: stretch;
+@media (min-width: 1024px) {
+    .main-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "presentacion presentacion"
+        "sobre-pagina aprendizaje"
+        "gatitos experiencia";
+    }
 }
 
-.contacto-info {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    flex: 1 1 400px;
-    min-width: 0;
+.sobre-mi-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:  
+        "biografia biografia"
+        "sobre-mi intereses"
+        "supervisores supervisores";
 }
 
-.contacto-info > section,
-.contacto-info > article {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    padding: 24px;
-    background-color: #fff5f6;
-    border-radius: 12px;
-}
-
-.contacto-info .list {
+footer {
     flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.contacto-info .rrss {
-    display: block;
-}
-
-.contacto main > section {
-    flex: 1 1 300px;
-    min-width: 0;
-}
-
-.contacto .imagen {
-    width: 100%;
-    max-width: 350px;
-    height: auto;
-    align-self: center;
+    justify-content: space-between;
+    padding: 20px 50px;
 }
