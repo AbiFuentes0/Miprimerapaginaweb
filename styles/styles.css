@@ -241,25 +241,26 @@ footer ul {
 /* Media Query - Computadoras */
 
 @media (min-width: 1024px) {
+
     .main-grid {
         grid-template-columns: 1fr 1fr;
-        grid-template-areas: 
-        "presentacion presentacion"
-        "sobre-pagina aprendizaje"
-        "gatitos experiencia";
+        grid-template-areas:
+            "presentacion presentacion"
+            "sobre-pagina aprendizaje"
+            "gatitos experiencia";
     }
-}
 
-.sobre-mi-grid {
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:  
-        "biografia biografia"
-        "sobre-mi intereses"
-        "supervisores supervisores";
-}
+    .sobre-mi-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "biografia biografia"
+            "sobre-mi intereses"
+            "supervisores supervisores";
+    }
 
-footer {
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 20px 50px;
+    footer {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 20px 50px;
+    }
 }
