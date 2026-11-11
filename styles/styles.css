@@ -58,7 +58,7 @@
 /* Imagenes */
 
 .logo {
-    height: 15vh;
+    height: 100px;
     width: auto;
 }
 
@@ -81,7 +81,8 @@ header {
     padding: 20px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
     gap: 20px;
 }
@@ -97,7 +98,7 @@ header {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 15px;
+    gap: 10px;
 }
 
 /* Contenedor principal */
@@ -199,6 +200,7 @@ figcaption {
 .redes-contacto {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 20px;
 }
 
@@ -221,26 +223,26 @@ footer ul {
     gap: 20px;
 }
 
-/* Media Query - Celulares */
-
-@media (max-width: 600px) {
-    header {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .navbar ul {
-        gap: 10px;
-    }
-
-    .logo {
-        height: 100px;
-    }
-}
-
 /* Media Query - Computadoras */
 
 @media (min-width: 1024px) {
+
+/* Navbar */
+
+    header {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+
+    .navbar ul {
+        gap: 15px;
+    }
+
+    .logo {
+        height: 15vh;
+    }
+
+/* CSS Grid - Página de inicio */
 
     .main-grid {
         grid-template-columns: 1fr 1fr;
@@ -250,6 +252,8 @@ footer ul {
             "gatitos experiencia";
     }
 
+/* CSS Grid - Sobre mí */
+
     .sobre-mi-grid {
         grid-template-columns: 1fr 1fr;
         grid-template-areas:
@@ -258,9 +262,35 @@ footer ul {
             "supervisores supervisores";
     }
 
+/* Footer */
+
     footer {
         flex-direction: row;
         justify-content: space-between;
         padding: 20px 50px;
     }
+}
+
+/* Página de Servicios */
+
+.servicios > section,
+.servicios > article {
+    background-color: #fff5f6;
+    padding: 25px;
+}
+
+/* Página de Proyectos */
+
+.proyectos > section,
+.proyectos > article {
+    background-color: #fff5f6;
+    padding: 25px;
+}
+
+/* Página de Contacto */
+
+.contacto-contenido > section,
+.contacto-contenido > article {
+    background-color: #fff5f6;
+    padding: 25px;
 }
