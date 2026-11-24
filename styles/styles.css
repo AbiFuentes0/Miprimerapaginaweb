@@ -142,8 +142,8 @@ header {
 main {
     display: flex;
     flex-direction: column;
-    gap: 30px;
-    padding: 20px;
+    gap: 20px;
+    padding: 15px;
 }
 
 /* CSS Grid - Página de inicio */
@@ -157,7 +157,7 @@ main {
         "aprendizaje"
         "gatitos"
         "experiencia";
-    gap: 30px;
+    gap: 20px;
 }
 
 .presentacion {
@@ -189,7 +189,7 @@ main {
         "sobre-mi"
         "intereses"
         "supervisores";
-    gap: 30px;
+    gap: 20px;
 }
 
 .biografia {
@@ -216,6 +216,8 @@ main > article {
     flex-direction: column;
     gap: 15px;
     padding: 20px;
+    background-color: #fff5f6;
+    border-radius: 15px;
 }
 
 /* Imágenes y descripción */
@@ -316,6 +318,20 @@ footer ul {
 
 @media (min-width: 1024px) {
 
+/* Contenedor principal */
+
+main {
+    gap: 30px;
+    padding: 20px;
+}
+
+/* Secciones de contenido */
+
+main > section,
+main > article {
+    padding: 25px;
+}
+
 /* Navbar */
 
     .logo {
@@ -330,6 +346,7 @@ footer ul {
             "presentacion presentacion"
             "sobre-pagina aprendizaje"
             "gatitos experiencia";
+            gap: 30px;
     }
 
 /* CSS Grid - Sobre mí */
@@ -340,6 +357,7 @@ footer ul {
             "biografia biografia"
             "sobre-mi intereses"
             "supervisores supervisores";
+            gap: 30px;
     }
 
 /* Footer */
@@ -349,22 +367,6 @@ footer ul {
         justify-content: space-between;
         padding: 20px 50px;
     }
-}
-
-/* Página de Servicios */
-
-.servicios > section,
-.servicios > article {
-    background-color: #fff5f6;
-    padding: 25px;
-}
-
-/* Página de Proyectos */
-
-.proyectos > section,
-.proyectos > article {
-    background-color: #fff5f6;
-    padding: 25px;
 }
 
 /* Card de Proyectos */
@@ -415,12 +417,4 @@ footer ul {
 .proyectos .btn-primary:active {
     background-color: var(--secondary-color);
     color: var(--background-color);
-}
-
-/* Página de Contacto */
-
-.contacto-contenido > section,
-.contacto-contenido > article {
-    background-color: #fff5f6;
-    padding: 25px;
 }
