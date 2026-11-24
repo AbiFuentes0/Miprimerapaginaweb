@@ -47,6 +47,20 @@
 .link {
     color: var(--primary-color);
     text-decoration: none;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.link:hover {
+    color: var(--secondary-color);
+}
+
+.link:focus {
+    outline: 2px solid var(--primary-color);
+}
+
+.link:active {
+    color: var(--background-color);
+    background-color: var(--primary-color);
 }
 
 /* Listas */
@@ -66,6 +80,15 @@
     width: 32px;
     height: 32px;
     object-fit: contain;
+    transition: opacity 0.3s;
+}
+
+.rrss:hover {
+    opacity: 0.7;
+}
+
+.rrss:active {
+    opacity: 0.5;
 }
 
 .imagen {
@@ -78,27 +101,40 @@
 
 header {
     background-color: #C9859D;
-    padding: 20px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+    padding: 10px 20px;
 }
 
 .navbar {
-    display: flex;
-    align-items: center;
+    width: 100%;
 }
 
-.navbar ul {
+.navbar .nav-link {
+    color: var(--primary-color);
+    border-radius: 8px;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.navbar .nav-link:hover {
     color: var(--background-color);
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
+}
+
+.navbar .nav-link:focus {
+    color: var(--primary-color);
+    background-color: var(--background-color);
+    outline: 2px solid var(--primary-color);
+}
+
+.navbar .nav-link:active {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 2px var(--primary-color);
+}
+
+.navbar-toggler:active {
+    background-color: var(--secondary-color);
 }
 
 /* Contenedor principal */
@@ -204,6 +240,59 @@ figcaption {
     gap: 20px;
 }
 
+/* Carousel Gatitos */
+
+#carouselGatitos {
+    width: 100%;
+    max-width: 580px;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#carouselGatitos .carousel-indicators button {
+    background-color: var(--primary-color);
+    width: 10px;
+    height: 10px;
+    border: none;
+    border-radius: 50%;
+    transition: background-color 0.3s, opacity 0.3s;
+}
+
+#carouselGatitos .carousel-indicators button:hover {
+    opacity: 1;
+}
+
+#carouselGatitos .carousel-indicators button:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 3px;
+}
+
+#carouselGatitos .carousel-indicators button:active {
+    background-color: var(--background-color);
+}
+
+.carousel-control-prev, .carousel-control-next {
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.carousel-control-prev:hover, .carousel-control-next:hover {
+    opacity: 1;
+}
+
+.carousel-control-prev:focus, .carousel-control-next:focus {
+    opacity: 1;
+    outline: 2px solid var(--primary-color);
+}
+
+.carousel-control-prev:active, .carousel-control-next:active {
+    opacity: 0.5;
+}
+
 /* Footer */
 
 footer {
@@ -228,15 +317,6 @@ footer ul {
 @media (min-width: 1024px) {
 
 /* Navbar */
-
-    header {
-        flex-wrap: nowrap;
-        justify-content: space-between;
-    }
-
-    .navbar ul {
-        gap: 15px;
-    }
 
     .logo {
         height: 15vh;
@@ -285,6 +365,56 @@ footer ul {
 .proyectos > article {
     background-color: #fff5f6;
     padding: 25px;
+}
+
+/* Card de Proyectos */
+
+.proyectos .card {
+    width: 100%;
+    max-width: 580px;
+    margin: 0 auto;
+    background-color: var(--background-color);
+    border: 1px solid var(--primary-color);
+    color: var(--text-color);
+    transition: border-color 0.3s;
+}
+
+.proyectos .card:hover {
+    border-color: var(--secondary-color);
+}
+
+.proyectos .card:focus-within {
+    border-color: var(--secondary-color);
+}
+
+.proyectos .card-title {
+    font-family: 'Parisienne', sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    color: var(--primary-color);
+}
+
+.proyectos .btn-primary {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.proyectos .btn-primary:hover {
+    background-color: var(--background-color);
+    color: var(--primary-color);
+}
+
+.proyectos .btn-primary:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 3px;
+}
+
+.proyectos .btn-primary:active {
+    background-color: var(--secondary-color);
+    color: var(--background-color);
 }
 
 /* Página de Contacto */
